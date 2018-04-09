@@ -37,11 +37,11 @@ namespace FizzBuzzer.Tests
         }
 
         [Test]
-        public void Convert_ReturnsFizzBuzz_OnPassingInFifteen()
+        public void Convert_ReturnsFizzBuzz_OnPassingInAMultipleOfThreeAndFive( [Values( 15, 30, 45, 60 )] int input )
         {
             var buzzer = new FizzBuzzer();
 
-            var result = buzzer.Convert( 15 );
+            var result = buzzer.Convert( input );
 
             Assert.AreEqual( "FizzBuzz", result );
         }

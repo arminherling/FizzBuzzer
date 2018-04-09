@@ -6,16 +6,15 @@ namespace FizzBuzzer
     {
         public string Convert( int value )
         {
-            if( value == 15 )
-                return "FizzBuzz";
+            string result = null;
 
             if( value % 3 == 0 )
-                return "Fizz";
+                result += "Fizz";
 
-            if( value % 5 == 0)
-                return "Buzz";
+            if( value % 5 == 0 )
+                result += "Buzz";
 
-            return value.ToString();
+            return result ?? value.ToString();
         }
     }
 }
