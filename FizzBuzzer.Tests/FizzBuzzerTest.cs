@@ -7,7 +7,7 @@ namespace FizzBuzzer.Tests
     public class FizzBuzzerTest
     {
         [Test]
-        public void Convert_ReturnsNumberAsString_OnPassingInANumber( [Values( 1, 2, 4, 6, 7 )] int input )
+        public void Convert_ReturnsNumberAsString_OnPassingInANumber( [Values( 1, 2, 4, 7, 8 )] int input )
         {
             var buzzer = new FizzBuzzer();
 
@@ -17,11 +17,11 @@ namespace FizzBuzzer.Tests
         }
 
         [Test]
-        public void Convert_ReturnsFizz_OnPassingInThree()
+        public void Convert_ReturnsFizz_OnPassingInAMultipleOfThree( [Values( 3, 6, 9, 12, 18 )] int input )
         {
             var buzzer = new FizzBuzzer();
 
-            var result = buzzer.Convert( 3 );
+            var result = buzzer.Convert( input );
 
             Assert.AreEqual( "Fizz", result );
         }
