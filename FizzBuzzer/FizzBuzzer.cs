@@ -4,9 +4,12 @@ namespace FizzBuzzer
 {
     public class FizzBuzzer
     {
-        public string Convert( int v )
+        public string Convert( int value )
         {
-            return v.ToString();
+            if( value == 3 )
+                return "Fizz";
+
+            return value.ToString();
         }
     }
 }
