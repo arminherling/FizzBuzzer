@@ -35,5 +35,15 @@ namespace FizzBuzzer.Tests
 
             Assert.AreEqual( "Buzz", result );
         }
+
+        [Test]
+        public void Convert_ReturnsBuzz_OnPassingInFifteen()
+        {
+            var buzzer = new FizzBuzzer();
+
+            var result = buzzer.Convert( 15 );
+
+            Assert.AreEqual( "FizzBuzz", result );
+        }
     }
 }
