@@ -27,11 +27,11 @@ namespace FizzBuzzer.Tests
         }
 
         [Test]
-        public void Convert_ReturnsBuzz_OnPassingInFive()
+        public void Convert_ReturnsBuzz_OnPassingInAMultipleOfFive( [Values( 5, 10, 20, 25, 35 )] int input )
         {
             var buzzer = new FizzBuzzer();
 
-            var result = buzzer.Convert( 5 );
+            var result = buzzer.Convert( input );
 
             Assert.AreEqual( "Buzz", result );
         }
