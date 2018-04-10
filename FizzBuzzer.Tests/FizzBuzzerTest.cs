@@ -37,7 +37,7 @@ namespace FizzBuzzer.Tests
         }
 
         [Test]
-        public void Convert_ReturnsFizzBuzz_OnPassingInAMultipleOfThreeAndFive( [Values( 15, 30, 45, 60 )] int input )
+        public void Convert_ReturnsFizzBuzz_OnPassingInAMultipleOfThreeAndFive( [Values( 15, 30, 45, 60, 75 )] int input )
         {
             var buzzer = new FizzBuzzer();
 
