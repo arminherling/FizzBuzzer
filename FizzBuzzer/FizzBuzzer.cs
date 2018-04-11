@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace FizzBuzzer
 {
     public class FizzBuzzer
     {
-        private List<Rule> ruleSet = new List<Rule>();
+        private readonly List<Rule> ruleSet;
 
-        public FizzBuzzer()
+        public FizzBuzzer( List<Rule> rules = null )
         {
-            ruleSet.Add( new Rule( ( value ) => value % 3 == 0, "Fizz" ) );
-            ruleSet.Add( new Rule( ( value ) => value % 5 == 0, "Buzz" ) );
+            ruleSet = rules ?? new List<Rule>();
         }
 
         public string Convert( int value )

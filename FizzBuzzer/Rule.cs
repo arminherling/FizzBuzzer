@@ -2,7 +2,7 @@
 
 namespace FizzBuzzer
 {
-    class Rule
+    public class Rule
     {
         private Func<int, bool> validator;
         private string output;
