@@ -6,10 +6,7 @@ namespace FizzBuzzer
     {
         private readonly List<Rule> ruleSet;
 
-        public FizzBuzzer( List<Rule> rules = null )
-        {
-            ruleSet = rules ?? new List<Rule>();
-        }
+        public FizzBuzzer( List<Rule> rules = null ) => ruleSet = rules ?? new List<Rule>();
 
         public string Convert( int value )
         {

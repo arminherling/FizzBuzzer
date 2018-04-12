@@ -17,9 +17,6 @@ namespace FizzBuzzer
             return this;
         }
 
-        public FizzBuzzer Build()
-        {
-            return new FizzBuzzer( rules );
-        }
+        public FizzBuzzer Build() => new FizzBuzzer( rules );
     }
 }

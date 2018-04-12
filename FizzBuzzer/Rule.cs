@@ -13,9 +13,6 @@ namespace FizzBuzzer
             output = result;
         }
 
-        public string Apply( int value )
-        {
-            return validator.Invoke( value ) ? output : string.Empty;
-        }
+        public string Apply( int value ) => validator.Invoke( value ) ? output : string.Empty;
     }
 }
