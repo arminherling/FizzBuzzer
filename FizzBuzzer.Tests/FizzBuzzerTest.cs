@@ -47,5 +47,17 @@ namespace FizzBuzzer.Tests
 
             Assert.AreEqual( "FizzBuzz", result );
         }
+
+        [Test]
+        public void Convert_ReturnsBang_OnPassingInAMultipleOfSevenWhileUsingACustomRule( [Values( 7, 14, 21, 28, 35 )] int input )
+        {
+            var customBuzzer = new FizzBuzzBuilder()
+                .WithRule( ( i ) => i % 7 == 0, "Bang" )
+                .Build();
+
+            var result = customBuzzer.Convert( input );
+
+            Assert.AreEqual( "Bang", result );
+        }
     }
 }
