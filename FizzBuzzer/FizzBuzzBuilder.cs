@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace FizzBuzzer
 {
@@ -6,16 +7,12 @@ namespace FizzBuzzer
     {
         private List<Rule> rules = new List<Rule>();
 
-        public FizzBuzzBuilder WithFizzRule()
-        {
-            rules.Add( new Rule( ( value ) => value % 3 == 0, "Fizz" ) );
+        public FizzBuzzBuilder WithFizzRule() => WithRule( ( value ) => value % 3 == 0, "Fizz" );
+        public FizzBuzzBuilder WithBuzzRule() => WithRule( ( value ) => value % 5 == 0, "Buzz" );
 
-            return this;
-        }
-
-        public FizzBuzzBuilder WithBuzzRule()
+        public FizzBuzzBuilder WithRule( Func<int, bool> rule, string result )
         {
-            rules.Add( new Rule( ( value ) => value % 5 == 0, "Buzz" ) );
+            rules.Add( new Rule( rule, result ) );
 
             return this;
         }
